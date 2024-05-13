@@ -68,12 +68,19 @@ def main(page: ft.Page):
 
     def validate_input(input_text):
         allowed_chars = set("[] ,.0 1 2 3 4 5 6 7 8 9 -")
-        if set(input_text) - allowed_chars:
+        if input_text.strip() == "":
+            indicacion.value = "El campo de texto no puede estar vacío."
+            indicacion.update()
+
+        elif set(input_text) - allowed_chars:
+
             indicacion.value="invalido"
             indicacion.update()
+
         else:
-            indicacion.value="valido"
+            indicacion.value="INGRESAR MATRICES Y VECTORES COMO UNA LISTA DE LISTAS. EJEMPLO: matriz: [[0, 0], [0, 0]] vector: [0, 0]"
             indicacion.update()
+        
 
 
 
