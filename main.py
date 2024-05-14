@@ -32,11 +32,6 @@ def eliminacion_gausseana(A, b):
     return x
 
 
-
-
-    
-     
-
 def main(page: ft.Page):
     def resolver_clicked(e):
         validate_input(str(A_input.value))
@@ -86,14 +81,15 @@ def main(page: ft.Page):
 
     A_input = ft.TextField(hint_text="Introduce la matriz A como una lista de listas")
     b_input = ft.TextField(hint_text="Introduce el vector b como una lista")
-    indicacion = ft.Text(value="INGRESAR MATRICES Y VECTORES COMO UNA LISTA DE LISTAS. EJEMPLO: matriz: [[0, 0], [0, 0]] vector: [0, 0]", color="yellow")
+    indicacion = ft.Text(value="INGRESAR MATRICES Y VECTORES COMO UNA LISTA DE LISTAS. EJEMPLO: matriz: [[0, 0], [0, 0]] vector: [0, 0]", color="yellow300", italic=True)
     
 
     resolver_button = ft.ElevatedButton("Resolver", on_click=resolver_clicked)
 
    
     page.add(A_input, b_input, indicacion, resolver_button)
-    dd = ft.Dropdown(width=300,options=[
+    dd = ft.Dropdown(width=300, hint_text="Elige el tipo de operacion",
+                     options=[
             ft.dropdown.Option("Gauss-Jordan", on_click=elegirop),
             ft.dropdown.Option("Eliminacion Gausseana", on_click=elegirop),
 

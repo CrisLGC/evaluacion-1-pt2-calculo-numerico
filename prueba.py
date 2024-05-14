@@ -14,13 +14,6 @@ def gauss_jordan(A, b):
     x = Ab[:, -1]
     return x
 
-# Solicitar al usuario el tamaño del sistema de ecuaciones
-
-
-# Inicializar la matriz A y el vector b
-
-
-# Usar la función gauss_jordan para resolver el sistema de ecuaciones
 A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 b = np.array([1, 2, 3])
 
