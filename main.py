@@ -2,19 +2,19 @@ import numpy as np
 import flet as ft
 
 def gauss_jordan(A, b):
-        A = A.astype(float)
-        Ab = np.hstack([A, b.reshape(-1, 1)])
-        
-        n = len(b)
+    A = A.astype(float)
+    Ab = np.hstack([A, b.reshape(-1, 1)])
+    n = len(b)
 
-        for i in range(n):
-            Ab[i] = Ab[i] / Ab[i, i]
-            
-            for j in range(n):
-                if i != j:
-                    Ab[j] = Ab[j] - Ab[i] * Ab[j, i]
-        x = Ab[:, -1]
-        return x
+    for i in range(n):
+        Ab[i] = Ab[i] / Ab[i, i]
+        for j in range(n):
+            if i != j:
+                Ab[j] = Ab[j] - Ab[i] * Ab[j, i]
+
+    x = Ab[:, -1]
+    return x
+
 
 def eliminacion_gausseana(A, b):
     n = len(b)
