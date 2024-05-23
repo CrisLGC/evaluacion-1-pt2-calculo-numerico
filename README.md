@@ -1,9 +1,1 @@
-# A enveva1-2 Flet app
-
-An example of a minimal Flet app.
-
-To run the app:
-
-```
-flet run [app_directory]
-```
+Éste es un proyecto dentro de un entorno virtual de Python usando pip con la finalidad de hacer una calculadora de sistemas de ecuaciones con el método Gauss-Jordan y eliminación Gausseana utilizando programación modular y una interfaz creada con la librería FLET además de la implementación de la librería numpy para manejar matrices y vectores dentro del back-end 
